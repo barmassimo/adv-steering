@@ -91,7 +91,7 @@ print(f"Modello caricato: {model.config.num_hidden_layers} layer, hidden size {m
 Per ogni coppia prendiamo l'attivazione dell'ultimo token nel layer scelto. La media di `attivazione_positiva - attivazione_neutra`, normalizzata, è il vettore di steering. Come nel notebook originale, la scala è calibrata misurando la norma L2 media delle attivazioni prodotte da `The quick brown fox jumps over the lazy dog.` nello stesso layer.
 """
 
-STEERING_PERCENT = 0.14
+STEERING_PERCENT = 0.13
 
 def last_token_activation(text, layer_idx):
     captured = {}
